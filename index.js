@@ -8,7 +8,7 @@ const fs = require('fs');
 
   const imgList = await page.evaluate( () => {
     
-    const nodeList = document.querySelectorAll('.roundy.sortable.jquery-tablesorter tr a img');
+    const nodeList = document.querySelectorAll('.tabber.tabberlive .tabbertab .table-wrapper.table-is-wide .table-scrollable .roundy .roundy.sortable.jquery-tablesorter a img');
 
     const imgArray = [ ...nodeList ];
 
@@ -19,6 +19,8 @@ const fs = require('fs');
     return imgList
 
   });
+
+  
 
   fs.writeFile(
     'fishesImg.json',
